@@ -1,0 +1,18 @@
+<div class="nav_bar">
+	<ul>
+		<li><a href="/bogs">Display All Bogs</a></li>
+		<li><a href="/bogs/new">Submit A New Bog</a></li>
+	</ul>
+</div>
+
+<% @bogs.each do |bog| %>
+
+	<div>
+		Name: <%= bog[:name] %> <br>
+		Type: <%= bog[:description] %><br>
+		<a href="bogs/<%= bog.id %>/edit">Edit Bog</a> <br>
+		<a href="bogs/<%= bog.id %>/delete">Delete Bog</a>
+	</div>
+	<br>
+
+<% end %>

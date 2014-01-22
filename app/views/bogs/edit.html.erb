@@ -1,0 +1,16 @@
+<div class="nav_bar">
+	<ul>
+		<li><a href="/bogs">Display All Bogs</a></li>
+		<li><a href="/bogs/new">Submit A New Bog</a></li>
+
+	</ul>
+</div>
+
+<form action="/bogs/<%= @bog.id %>" method="post">
+	<input type="hidden" name="_method" value="put">
+	Name: <input type="text" name="bog[name]" value="<%= @bog.name %>"><br>
+	Description: <textarea name="bog[description]"><%= @bog.description %></textarea><br>
+	<%= token_tag form_authenticity_token %>
+
+    <button> Update Bog </button>
+</form>

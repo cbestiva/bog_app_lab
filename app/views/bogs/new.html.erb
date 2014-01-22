@@ -1,0 +1,14 @@
+<div class="nav_bar">
+	<ul>
+		<li><a href="/bogs">Display All Bogs</a></li>
+		<li><a href="/bogs/new">Submit A New Bog</a></li>
+
+	</ul>
+</div>
+
+<form action="/bogs" method="post">
+	Name: <input type="text" name="bog[name]"><br>
+	Description: <br><textarea name="bog[description]"></textarea><br>
+	<%= token_tag form_authenticity_token %>
+        <button> Save Bog </button>
+</form>
