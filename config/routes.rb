@@ -14,6 +14,6 @@ BogApp::Application.routes.draw do
 
   put "/bogs/:id", to: "bogs#update"
 
-  get "/bogs/:id/delete", to: "bogs#delete"
+  delete "/bogs/:id/edit", to: "bogs#delete"
 
 end
